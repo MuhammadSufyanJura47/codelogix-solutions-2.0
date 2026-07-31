@@ -1,0 +1,84 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model admin {
+  id        Int      @id @default(autoincrement())
+  email     String
+  password  String
+  role      String   @default("admin")
+  createdAt DateTime @default(now())
+}
+
+model application {
+  id                 Int                            @id @default(autoincrement())
+  studentType        application_studentType
+  fullName           String
+  fatherName         String
+  phone              String
+  email              String
+  linkedin           String
+  selectedCourse     String
+  semesterClass      String
+  department         String
+  university         String
+  city               String?
+  country            String?
+  profilePictureLink String                         @db.Text
+  paymentProofLink   String                         @db.Text
+  feeAmount          Int
+  currency           String
+  verificationStatus application_verificationStatus @default(PENDING)
+  createdAt          DateTime                       @default(now())
+}
+
+model contactmessage {
+  id        Int      @id @default(autoincrement())
+  name      String
+  email     String
+  phone     String
+  subject   String
+  message   String   @db.Text
+  createdAt DateTime @default(now())
+}
+
+model course {
+  id          Int      @id @default(autoincrement())
+  title       String
+  description String   @db.Text
+  duration    String
+  category    String
+  image       String   @db.Text
+  pricePKR    Int
+  priceUSD    Int
+  createdAt   DateTime @default(now())
+}
+
+model teacher {
+  id        Int      @id @default(autoincrement())
+  name      String
+  role      String
+  expertise String?
+  bio       String   @db.Text
+  image     String   @db.Text
+  linkedin  String   @db.Text
+  github    String   @db.Text
+  email     String
+  createdAt DateTime @default(now())
+}
+
+enum application_studentType {
+  PAKISTANI
+  INTERNATIONAL
+}
+
+enum application_verificationStatus {
+  PENDING
+  VERIFIED
+  REJECTED
+}
