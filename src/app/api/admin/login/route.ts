@@ -1,18 +1,15 @@
 import { NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
+import { authCookie, createSessionToken } from "@/lib/auth";
 
 export async function POST(request: Request) {
   const body = await request.json();
-
-  console.log("Request Body:", body);
 
   const admin = await prisma.admin.findFirst({
     where: {
       email: body.email,
     },
   });
-
-  console.log("Admin:", admin);
 
   if (!admin) {
     return NextResponse.json(
@@ -28,8 +25,18 @@ export async function POST(request: Request) {
     );
   }
 
-  return NextResponse.json({
+  const response = NextResponse.json({
     success: true,
     message: "Login successful",
   });
+
+  response.cookies.set(authCookie.name, createSessionToken(admin.email), {
+    httpOnly: true,
+    secure: process.env.NODE_ENV === "production",
+    sameSite: "lax",
+    path: "/",
+    maxAge: authCookie.maxAge,
+  });
+
+  return response;
 }
