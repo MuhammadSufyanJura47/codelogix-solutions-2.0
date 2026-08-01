@@ -325,7 +325,7 @@ textarea {
 .profile-photo-frame {
   display: grid;
   width: 100%;
-  height: 16rem;
+  height: 22rem;
   place-items: center;
   overflow: hidden;
   border-radius: 1.25rem;
@@ -335,21 +335,22 @@ textarea {
 .profile-photo-frame img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: center top;
+  object-fit: contain;
+  object-position: center;
+  background: #fff;
 }
 
 .profile-photo-image {
   width: 100% !important;
   height: 100% !important;
-  object-fit: cover;
-  object-position: center top;
+  object-fit: contain;
+  object-position: center;
+  background: #fff;
 }
 
 .team-photo-frame {
-  height: 10rem;
+  height: 22rem;
 }
-
 .profile-photo-frame--compact {
   height: 11rem;
   border-radius: 1.2rem;
