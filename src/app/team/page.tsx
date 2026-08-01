@@ -29,8 +29,8 @@ export default function TeamPage() {
               <Image
                 src={member.image}
                 alt={member.name}
-                width={900}
-                height={700}
+                width={600}
+                height={800}
                 className="profile-photo-image"
                 style={{ width: "100%", height: "100%" }}
               />
