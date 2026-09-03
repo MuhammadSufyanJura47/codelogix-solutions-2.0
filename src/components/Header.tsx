@@ -20,13 +20,13 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-white/50 bg-white/80 backdrop-blur-xl">
-      <div className="sale-marquee bg-[#0b6b3a] text-white">
+      {/* <div className="sale-marquee bg-[#0b6b3a] text-white">
         <div className="sale-marquee-track py-2 text-sm font-black uppercase tracking-[0.12em]">
           <span>🇵🇰 Azadi Sale is live: special course discounts available till 14 August 2026.</span>
           <span>🇵🇰 Azadi Sale is live: special course discounts available till 14 August 2026.</span>
           <span>🇵🇰 Azadi Sale is live: special course discounts available till 14 August 2026.</span>
         </div>
-      </div>
+      </div> */}
       <div className="mx-auto flex max-w-7xl items-center gap-4 px-4 py-3 sm:px-6 lg:px-8">
         <Logo />
         <nav className="hidden flex-1 items-center justify-center gap-2 lg:flex">
