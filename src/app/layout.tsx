@@ -103,6 +103,13 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
         />
+
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8127671738814319"
+          crossOrigin="anonymous"
+        />
+
         <SplashCursor
           DENSITY_DISSIPATION={3.5}
           VELOCITY_DISSIPATION={2}
