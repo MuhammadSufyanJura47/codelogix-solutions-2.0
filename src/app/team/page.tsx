@@ -5,8 +5,8 @@ import { PageHero } from "@/components/PageHero";
 import { team } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "Founder & Team",
-  description: "Founder and team profiles for CODELOGIX Solutions.",
+  title: "Founders & Team",
+  description: "Founder profiles and leadership team for CODELOGIX Solutions - Muhammad Sufyan Jura and Zeeshan Manzoor.",
   alternates: { canonical: "/team" },
 };
 
@@ -15,7 +15,7 @@ export default function TeamPage() {
     <div>
       <PageHero
         eyebrow="Team"
-        title="Founder and leadership"
+        title="Founders and leadership"
         text="A compact leadership team focused on delivery, student support, and operational clarity from first inquiry to completion."
         actions={[
           { label: "Contact Us", href: "/contact" },
