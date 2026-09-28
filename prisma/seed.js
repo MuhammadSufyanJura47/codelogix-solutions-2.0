@@ -73,7 +73,7 @@ const teachers = [
   },
   {
     name: "Muhammad Sufyan Jura",
-    role: "Co-Founder, Web Development & Generative AI Instructor",
+    role: "Founder, Web Development & Generative AI Instructor",
     expertise: "Web Development, Generative AI",
     bio: "Technology educator focused on practical software training, web platforms, and student career development.",
     image: "/images/team-leadership.jpg",
