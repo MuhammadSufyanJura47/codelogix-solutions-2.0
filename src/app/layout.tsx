@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     template: "%s | CODELOGIX Solutions",
   },
   description: siteConfig.description,
-  keywords: ["CODELOGIX Solutions", "online courses Pakistan", "web development course", "AI solutions", "tech training", "internship", "Azadi Sale courses"],
+  keywords: ["CODELOGIX Solutions", "online courses Pakistan", "web development course", "AI solutions", "tech training", "internship", "Azadi Sale courses", "founders Muhammad Sufyan Jura and Zeeshan Manzoor"],
   authors: [{ name: "CODELOGIX Solutions", url: siteConfig.url }],
   creator: "CODELOGIX Solutions",
   publisher: "CODELOGIX Solutions",
@@ -84,6 +84,18 @@ export default function RootLayout({
     description: siteConfig.description,
     email: siteConfig.email,
     telephone: siteConfig.phone,
+    founder: [
+      {
+        "@type": "Person",
+        name: "Muhammad Sufyan Jura",
+        role: "Founder",
+      },
+      {
+        "@type": "Person",
+        name: "Zeeshan Manzoor",
+        role: "Founder",
+      },
+    ],
     sameAs: [
       siteConfig.socials.linkedin,
       siteConfig.socials.instagram,
