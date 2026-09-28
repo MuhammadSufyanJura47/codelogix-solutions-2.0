@@ -33,6 +33,9 @@ export const metadata: Metadata = {
   authors: [{ name: "CODELOGIX Solutions", url: siteConfig.url }],
   creator: "CODELOGIX Solutions",
   publisher: "CODELOGIX Solutions",
+  verification: {
+    google: "sc6ncL0bz3HzCjxEjkxI0KNGGsNnXNWc9DzyZaQC-UU",
+  },
   alternates: { canonical: "/" },
   robots: {
     index: true,
